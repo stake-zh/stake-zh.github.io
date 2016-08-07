@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -86,29 +86,26 @@
 
 <meta name="description" content="拉代码1git clone ssh://user-name@url
 获取远程信息1git fetch (--all)
-更新代码12git pull (--rebase| -r)//(pull 表示把远程仓库的更新拉下来， --rebase 虽然是可选项， 但是一般都建议一起使用，这里涉及到 “基”的概念。
-分支切分支代码拉下来后默认是在master分支， 需要用 git checkout ref_">
+更新代码12git pull (--rebase| -r)//(pull 表示把远程仓库的更新拉下来， --rebase 虽然是可选项， 但是一般都建议一起使用，这里涉及到 “基”的概念。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git 常用操作">
 <meta property="og:url" content="http://stake-zh.github.io/2016/07/30/git-常用操作/index.html">
 <meta property="og:site_name" content="stake-zh`s blog">
 <meta property="og:description" content="拉代码1git clone ssh://user-name@url
 获取远程信息1git fetch (--all)
-更新代码12git pull (--rebase| -r)//(pull 表示把远程仓库的更新拉下来， --rebase 虽然是可选项， 但是一般都建议一起使用，这里涉及到 “基”的概念。
-分支切分支代码拉下来后默认是在master分支， 需要用 git checkout ref_">
+更新代码12git pull (--rebase| -r)//(pull 表示把远程仓库的更新拉下来， --rebase 虽然是可选项， 但是一般都建议一起使用，这里涉及到 “基”的概念。">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git 常用操作">
 <meta name="twitter:description" content="拉代码1git clone ssh://user-name@url
 获取远程信息1git fetch (--all)
-更新代码12git pull (--rebase| -r)//(pull 表示把远程仓库的更新拉下来， --rebase 虽然是可选项， 但是一般都建议一起使用，这里涉及到 “基”的概念。
-分支切分支代码拉下来后默认是在master分支， 需要用 git checkout ref_">
+更新代码12git pull (--rebase| -r)//(pull 表示把远程仓库的更新拉下来， --rebase 虽然是可选项， 但是一般都建议一起使用，这里涉及到 “基”的概念。">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Muse',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -294,13 +291,14 @@
         <h3 id="拉代码">拉代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> ssh://user-name@url</span><br></pre></td></tr></table></figure>
 <h4 id="获取远程信息">获取远程信息</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch (--all)</span><br></pre></td></tr></table></figure>
 <h4 id="更新代码">更新代码</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull (--rebase| -r)</span><br><span class="line">//(pull 表示把远程仓库的更新拉下来， --rebase 虽然是可选项， 但是一般都建议一起使用，这里涉及到 “基”的概念。</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="分支">分支</h3><h4 id="切分支">切分支</h4><p>代码拉下来后默认是在master分支， 需要用 <code>git checkout ref_name</code>切过去</p>
 <h4 id="列分支">列分支</h4><p><code>git branch</code> 列出本地分支<br><code>git branch -r</code>列出远程分支</p>
 <h4 id="切分支-1">切分支</h4><p><code>`git checkout branch_name</code> ` （执行命令前本地不能有未缓存的提交，否则失败）</p>
 <h4 id="新建分支">新建分支</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git branch <span class="string">'branch_name'</span></span><br><span class="line">git checkout -b <span class="string">'branch_name'</span>  // 执行完后会立即切换到新分支</span><br><span class="line">git branch <span class="string">'branch_name'</span> <span class="string">'origin/branch_name'</span> //新建远程分支 </span><br><span class="line">git checkout branch_name (等价于 git checkout  -b <span class="string">'branch_name'</span>  <span class="string">'origin/branch_name'</span> )</span><br><span class="line">//使用远程分支，并在本地建立branch</span><br></pre></td></tr></table></figure>
 <h4 id="删除本地分支">删除本地分支</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -D <span class="string">'branch_name'</span> //大写D表示强制删除</span><br></pre></td></tr></table></figure>
 <h4 id="本地分支与远程分支的对应">本地分支与远程分支的对应</h4><p>特殊情况下，执行 <code>git pull</code> 命令时会提示找不到对应的远程分支， 需要用 <code>git branch --set-upstream-to=&lt;upstream&gt;</code>命令指定一个远程分支.</p>
-<h4 id="显示远程分支的url">显示远程分支的url</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//<span class="keyword">if</span> referential integrity has been broken:</span><br><span class="line">git config --get remote.origin.url</span><br><span class="line"></span><br><span class="line">//If referential integrity is intact:</span><br><span class="line">git remote show origin</span><br></pre></td></tr></table></figure>
+<h4 id="显示远程分支的url">显示远程分支的url</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//<span class="keyword">if</span> referential integrity has been broken:</span><br><span class="line">git config --get remote.origin.url</span><br><span class="line"></span><br><span class="line">//If referential integrity is intact:</span><br><span class="line">git remote show origin</span><br><span class="line"></span><br><span class="line">//本地git与远程服务器绑定</span><br><span class="line">git remote add origin git@github.com:xxx.git</span><br></pre></td></tr></table></figure>
 <h3 id="提交">提交</h3><h4 id="本地提交">本地提交</h4><ul>
 <li>一般都用图形化工具 citool.用<code>git citool</code>命令可调起。</li>
 <li>命令行的方式：</li>
@@ -343,8 +341,9 @@
 <h3 id="git_配置">git 配置</h3><ol>
 <li>修改git默认的编辑器nano为vim的方法<code>git config --global core.editor vim</code></li>
 <li>指定全局 ignore 文件 <code>git config --global core.excludesfile  &#39;/Users/xx/.gitignore_global&#39;</code></li>
+<li>修改某个git库下的用户名和邮箱</li>
 </ol>
-
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name <span class="string">'user-name'</span></span><br><span class="line">git config user.email <span class="string">'email'</span></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -382,6 +381,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/07/realm-使用总结/" rel="prev" title="realm 使用总结">
+                realm 使用总结 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -453,7 +456,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -463,7 +466,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -554,7 +557,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Pisces
   </a>
 </div>
 
@@ -619,6 +622,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
